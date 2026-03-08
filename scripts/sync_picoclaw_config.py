@@ -27,12 +27,13 @@ def main():
     env = read_env(ENV_PATH)
     config = json.loads(CONFIG_PATH.read_text())
 
-    kimi_key = env.get("PICOCLAW_KIMI_API_KEY") or env.get("PICOCLAW_PROVIDERS_QWEN_API_KEY", "")
+    alibaba_key = env.get("PICOCLAW_ALIBABA_API_KEY", "")
     discord_token = env.get("PICOCLAW_CHANNELS_DISCORD_TOKEN", "")
 
     for item in config.get("model_list", []):
-        if item.get("model_name") == "kimi-k2.5":
-            item["api_key"] = kimi_key
+        api_base = item.get("api_base", "")
+        if "dashscope.aliyuncs.com" in api_base:
+            item["api_key"] = alibaba_key
 
     discord_cfg = config.setdefault("channels", {}).setdefault("discord", {})
     if discord_token:
