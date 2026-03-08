@@ -7,6 +7,7 @@ export default defineConfig({
   base: '/jetclaw/',
   cleanUrls: true,
   lastUpdated: true,
+  ignoreDeadLinks: [/^\.\/cad\/.*\.stl$/],
   head: [['link', { rel: 'icon', href: '/images/favicon.png' }]],
   vite: {
     assetsInclude: ['**/*.JPG', '**/*.JPEG', '**/*.PNG', '**/*.GIF']
