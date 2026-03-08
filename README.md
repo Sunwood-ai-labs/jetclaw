@@ -1,8 +1,20 @@
-# JetClaw
-
-<p align="center">
+<div align="center">
   <img src="docs/public/images/jetclaw_icon.webp" alt="JetClaw icon" width="320">
-</p>
+  <h1>JetClaw</h1>
+  <p>Waveshare JetBot 2GB with a lightweight PicoClaw agent body on Jetson Nano 2GB.</p>
+  <p>
+    <img src="https://img.shields.io/badge/Waveshare-JetBot%202GB-222222?logo=databricks&logoColor=white" alt="Waveshare JetBot 2GB">
+    <img src="https://img.shields.io/badge/Jetson%20Nano-2GB-76B900?logo=nvidia&logoColor=white" alt="Jetson Nano 2GB">
+    <img src="https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white" alt="Python 3.x">
+    <img src="https://img.shields.io/badge/PicoClaw-Agent%20Runtime-111827" alt="PicoClaw">
+    <img src="https://img.shields.io/badge/VitePress-Docs-646CFF?logo=vite&logoColor=white" alt="VitePress Docs">
+    <img src="https://img.shields.io/badge/GitHub%20Pages-Deployed-121013?logo=github&logoColor=white" alt="GitHub Pages">
+  </p>
+  <p>
+    <a href="./README.md"><img src="https://img.shields.io/badge/Language-English-0F766E?style=for-the-badge" alt="English"></a>
+    <a href="./README.ja.md"><img src="https://img.shields.io/badge/言語-日本語-B91C1C?style=for-the-badge" alt="日本語"></a>
+  </p>
+</div>
 
 JetClaw gives a Waveshare JetBot 2GB a lightweight agent body with PicoClaw on a Jetson Nano 2GB.
 
