@@ -8,6 +8,9 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   head: [['link', { rel: 'icon', href: '/images/favicon.png' }]],
+  vite: {
+    assetsInclude: ['**/*.JPG', '**/*.JPEG', '**/*.PNG', '**/*.GIF']
+  },
   themeConfig: {
     logo: '/images/logo.png',
     siteTitle: 'JetClaw',
