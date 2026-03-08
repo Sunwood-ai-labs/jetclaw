@@ -1,65 +1,92 @@
 # Getting Started
 
-## Step 1 - Pick your vehicle!
+This is the shortest path for bringing up JetClaw on a real Waveshare JetBot 2GB.
 
-To get started with JetBot, first pick your vehicle (hardware) you want to make.
+For the full step-by-step commands, use the root [README](https://github.com/Sunwood-ai-labs/jetclaw/blob/main/README.md). This page stays shorter on purpose and points you at the right checks in the right order.
 
-![](images/nvjetbot_vs_3rdparty.png)
+## 1. Confirm The Hardware First
 
-For details of NVIDIA-designed open-source JetBot hardware, check [Bill of Materials](bill_of_materials.md) page and [Hardware Setup](hardware_setup.md) page.
+Do not start with PicoClaw if the robot itself is not proven.
 
-To find kits available from third parties, check [Third Party Kits](third_party_kits.md) page.
+Run:
 
-## Step 2 - Setup your JetBot
+```bash
+./scripts/verify_waveshare_i2c.sh
+```
 
-After you've decided which vehicle you want to build, you'll need to source the parts and follow the setup instructions. After that, you're ready to move on to the JetBot examples!
+Expected addresses:
 
-![JetBot Getting Started Steps](images/steps_nvjetbot_vs_3rdparty.png)
+- `0x3c`
+- `0x41`
+- `0x60`
+- `0x70`
 
-### Option 1 - DIY JetBot Kit
+If the board does not answer here, use [Waveshare JetBot 2GB](./jetclaw/waveshare-jetbot-2gb.md).
 
-To get started with the DIY open-source JetBot, follow these steps.
+## 2. Bring Up Native JetBot Services
 
-1. Get the parts from the [bill of materials](bill_of_materials.md).
+Install the local Jupyter and stats services:
 
-2. Follow the [hardware setup](hardware_setup.md)
+```bash
+./scripts/install_native_services.sh
+```
 
-3. Follow the [software setup](software_setup/sd_card.md)
+Default Jupyter password:
 
-### Option 2 - Third Party JetBot Kit
+```text
+jetbot
+```
 
-Third party JetBot kits may have different setup instructions from the DIY JetBot. To get started with a third party jetbot, we recommend referring to the third party kit's setup instructions for details on how to setup.
+## 3. Prepare PicoClaw Runtime
 
-Check out the [Third Party Kits](third_party_kits.md) page for links and information related to third party kits.
+Create the runtime directory and copy the tracked templates:
 
-## Step 3 - Follow the examples
+```bash
+mkdir -p ~/.picoclaw/workspace
+cp picoclaw/config/config.template.json ~/.picoclaw/config.json
+cp picoclaw/config/picoclaw.env.example ~/.picoclaw/picoclaw.env
+cp picoclaw/workspace/AGENT.md ~/.picoclaw/workspace/AGENT.md
+cp picoclaw/workspace/jetbot_bridge.py ~/.picoclaw/workspace/jetbot_bridge.py
+chmod +x ~/.picoclaw/workspace/jetbot_bridge.py
+```
 
-JetBot comes with many examples to teach robotics and AI basics. These give you the experience you need to begin exploring your own applications with JetBot.
+Set these values in `~/.picoclaw/picoclaw.env`:
 
-### Example 1 - Basic Motion
+- `PICOCLAW_ALIBABA_API_KEY`
+- `PICOCLAW_CHANNELS_DISCORD_TOKEN`
+- `JETBOT_AGENT_BRIDGE_URL=http://127.0.0.1:8786`
 
-The [Basic Motion](examples/basic_motion.md) example teaches you how to program JetBot from your web browser with basic motor controls.
+The expected Kimi path in this repo is Alibaba Cloud Model Studio / DashScope `coding-intl`.
 
-### Example 2 - Teleoperation
+## 4. Install Services
 
-The [Teleoperation](examples/teleoperation.md) example teaches you how to stream live images from JetBot and control JetBot with a gamepad attached to your laptop.
+```bash
+sudo ./scripts/install_jetbot_agent_bridge_service.sh
+sudo ./scripts/install_picoclaw_gateway_service.sh
+```
 
-### Example 3 - Collision Avoidance
+## 5. Verify Service Paths And Health
 
-The [Collision Avoidance](examples/collision_avoidance.md) example teaches you how to collect data and train a custom Image Classification model to enable JetBot to avoid collisions in a variety of scenarios. The method learned here can be extended to recognize arbitrary classes of image, which can be extended far beyond JetBot!
+```bash
+systemctl cat jetbot_agent_bridge.service
+systemctl cat picoclaw-gateway.service
+curl http://127.0.0.1:8786/health
+curl http://127.0.0.1:18790/health
+python3 ~/.picoclaw/workspace/jetbot_bridge.py status
+```
 
-### Example 4 - Road Following
+The installed unit files should point at this repo path, not an older checkout.
 
-The [Road Following](examples/road_following.md) example teaches you how to collect data and train a custom Image Regression model to enable JetBot to follow a road. The method learned here can be extended to detect an arbitrary x, y coordinate in an image, which extends far beyond JetBot!
+## 6. Use A Short Motion Test
 
-### Example 5 - Object Following
+```bash
+python3 ~/.picoclaw/workspace/jetbot_bridge.py stop
+python3 ~/.picoclaw/workspace/jetbot_bridge.py pulse forward --speed 0.18 --duration 0.18
+```
 
-The [Object Following](examples/object_following.md) teaches you how to use a pre-trained object detection model for following an object, like a person, cup, or dog. The pre-trained network you'll learn to use here can be used for a variety of new AI projects.
+For deeper explanations, use:
 
-## And more!
-
-Take the examples, modify them, make JetBot do something new, or create an entirely new AI project of your own.  
-
-If you do something cool with JetBot, [let us know!](https://forums.developer.nvidia.com/c/agx-autonomous-machines/jetson-embedded-systems/jetson-projects)
-
-Happy JetBotting :)
+- [README](https://github.com/Sunwood-ai-labs/jetclaw/blob/main/README.md)
+- [Waveshare JetBot 2GB](./jetclaw/waveshare-jetbot-2gb.md)
+- [PicoClaw Integration](./jetclaw/picoclaw.md)
+- [Operations](./jetclaw/operations.md)

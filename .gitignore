@@ -10,6 +10,10 @@ __pycache__/
 # MkDocs documentation
 site/
 
+# VitePress documentation
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+
 # Local build artifacts
 build/
 dist/

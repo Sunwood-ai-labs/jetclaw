@@ -1,89 +1,66 @@
 # Contributing
 
-## Documenting
+## Documentation
 
-We use [mkdocs-material](https://github.com/squidfunk/mkdocs-material)
-to easily generate documentation from markdown.  
+This repository now uses VitePress for documentation.
+
+Docs source lives under `docs/`, and the GitHub Pages build is defined in `.github/workflows/deploy_docs.yml`.
 
 ### Installing Dependencies
 
 ```bash
-sudo apt-get update
-sudo apt-get -y install python3-pip
-sudo apt-get -y install mkdocs
-pip3 install mkdocs-material mike
+npm install
 ```
 
+### Local Preview
 
-### Testing
-
-To quickly test the version of the documentation you're using, without commiting
-anything to the ``gh-pages`` branch, run the following command.
+Run a local dev server:
 
 ```bash
-mkdocs serve --dev-addr=0.0.0.0:8000
+npm run docs:dev
+```
+
+Build the static site locally:
+
+```bash
+npm run docs:build
+```
+
+Preview the production build:
+
+```bash
+npm run docs:preview
 ```
 
 ### Deploying
 
-We use [mike](https://github.com/jimporter/mike) to maintain multiple versions
-of the documentation.  To build the documentation with mike, call
+Documentation is deployed automatically to GitHub Pages when changes land on `main`.
 
-```bash
-mike deploy <tag>
-```
+The workflow:
 
-This will build the documentation, and add a static version of the site under the
-``gh-pages`` branch.  For example, to deploy the master documentation we do
+1. installs Node dependencies
+2. builds the VitePress site
+3. uploads `docs/.vitepress/dist`
+4. deploys it with the GitHub Pages actions
 
-```bash
-mike deploy master
-```
+### Adding A New Page
 
-To set the default documentation version to master we would do.
+1. Add the markdown file under `docs/`.
+2. Add it to the sidebar in `docs/.vitepress/config.mts`.
+3. If the page is JetClaw-specific, prefer placing it under `docs/jetclaw/`.
+4. If the page changes robot setup or service behavior, update `README.md` at the same time.
 
-```bash
-mike set-default master
-```
+### Updating Existing Docs
 
-To push the documentation to Github Pages.
+Keep these aligned:
 
-```bash
-mike deploy master --push
-```
+- `README.md`
+- `AGENTS.md`
+- `docs/getting_started.md`
+- `docs/jetclaw/waveshare-jetbot-2gb.md`
+- `docs/jetclaw/picoclaw.md`
+- `docs/jetclaw/operations.md`
 
-### Adding a new page
+### Updating The Changelog
 
-Mkdocs looks for documentation under the ``docs`` folder.  To add a new documentation page, you will need to first add the file
-either directly to the ``docs`` folder, or to a different folder with a symbolic link to the ``docs`` folder.  For example, say we wanted to add a page named ``MAINTAINERS.md`` to the root of the project
-
-First, we create the file at the root of the project
-    
-```bash
-touch MAINTAINERS.md
-```
-
-Next, we add a symbolic link to the docs folder
-
-```bash
-cd docs/reference
-ln -s ../../MAINTAINERS.md .
-```
-    
-Finally, we add the file to our navigation in ``mkdocs.yml``
-
-```yaml
-- nav:
-    - Reference:
-        - 'Maintainers': reference/MAINTAINERS.md
-```
-
-Now, when you build the documentation you should see the page that
-we've added in the "Reference" section with the title "Maintainers".
-
-### Updating the Changelog
-
-We follow the guidance of  [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) for
-best practices in maintaining a chronological human-readable CHANGELOG.md file.  If
-the change is worth developers and users knowing about, consider adding an entry 
-to the change log.
+We follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) for `CHANGELOG.md`. If a change matters to users or maintainers, consider adding an entry.

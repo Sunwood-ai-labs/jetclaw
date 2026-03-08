@@ -8,6 +8,8 @@ This repo keeps the parts that should be versioned together:
 - `scripts/jetbot_agent_bridge.py`: safe localhost bridge for motor control
 - `picoclaw/`: PicoClaw service templates, config template, and workspace seed files
 
+Documentation site source lives under `docs/` and is built with VitePress.
+
 This layout was validated on:
 
 - Jetson Nano 2GB Developer Kit
@@ -31,6 +33,17 @@ Important detail:
 - PicoClaw itself is installed as a system binary
 - this repo owns the service templates, bridge script, workspace seed, and config template
 - runtime state lives in `~/.picoclaw`
+
+## Docs
+
+Local docs commands:
+
+```bash
+npm install
+npm run docs:dev
+```
+
+GitHub Pages is deployed by `.github/workflows/deploy_docs.yml`.
 
 ## What This Repo Tracks
 
