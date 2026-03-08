@@ -1,0 +1,20 @@
+*.asc
+*.pyc
+.ipynb_checkpoints
+__pycache__/
+*.env
+!.env.example
+!picoclaw/config/picoclaw.env.example
+.picoclaw/
+
+# MkDocs documentation
+site/
+
+# Local build artifacts
+build/
+dist/
+*.egg-info/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake

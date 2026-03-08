@@ -1,0 +1,19 @@
+[Unit]
+Description=JetBot localhost bridge for PicoClaw
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=__USER__
+WorkingDirectory=__ROOT_DIR__
+Environment=JETBOT_AGENT_BRIDGE_HOST=127.0.0.1
+Environment=JETBOT_AGENT_BRIDGE_PORT=8786
+Environment=JETBOT_AGENT_BRIDGE_MAX_SPEED=0.35
+Environment=JETBOT_AGENT_BRIDGE_MAX_DURATION=1.50
+ExecStart=/usr/bin/python3 __ROOT_DIR__/scripts/jetbot_agent_bridge.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
