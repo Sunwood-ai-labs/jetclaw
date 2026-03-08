@@ -6,8 +6,8 @@ hero:
   text: Waveshare JetBot 2GB with a lightweight agent body
   tagline: VitePress docs for JetBot, PicoClaw, Waveshare bring-up, and safe robot operations on Jetson Nano 2GB.
   image:
-    src: /images/logo.png
-    alt: JetClaw logo
+    src: /images/jetclaw_icon.webp
+    alt: JetClaw icon
   actions:
     - theme: brand
       text: Get Started

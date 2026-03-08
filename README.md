@@ -1,5 +1,9 @@
 # JetClaw
 
+<p align="center">
+  <img src="docs/public/images/jetclaw_icon.webp" alt="JetClaw icon" width="320">
+</p>
+
 JetClaw gives a Waveshare JetBot 2GB a lightweight agent body with PicoClaw on a Jetson Nano 2GB.
 
 This repo keeps the parts that should be versioned together:
