@@ -57,8 +57,9 @@ To build JetBot you'll need the following tools
 3. Solder the 2-pin and 4-pin screw terminals to motor driver
 4. Solder the 2-pin and 3-pin male headers to motor driver
 
-    ???+ warning  
-        Pay careful attention to the position of the 3-pin header.  It is offset by 1-pin from the corner.
+    ::: warning Warning
+    Pay careful attention to the position of the 3-pin header.  It is offset by 1-pin from the corner.
+    :::
 
 
 ### Step 4 - Strip motor driver power cable
@@ -71,9 +72,10 @@ To build JetBot you'll need the following tools
 
 1. Select the depicted micro USB from the pack 
 
-    ???+ warning
-        Pay careful attention to the image.  The cables are not identical.  
-        The other micro USB cable will be used to power the Jetson Nano.  Using the wrong power cable for Nano will block it's Ethernet port.
+    ::: warning Warning
+    Pay careful attention to the image.  The cables are not identical.  
+    The other micro USB cable will be used to power the Jetson Nano.  Using the wrong power cable for Nano will block it's Ethernet port.
+    :::
 
 2. Cut the depicted cable roughly ~20cm from the type-A terminal
 2. Strip the rubber coating ~3cm from the cut
@@ -94,21 +96,24 @@ To build JetBot you'll need the following tools
 
 2. Secure exposed red (+) and black (-) wires to the power terminals on motor driver
 
-    ???+ warning
-        Pay attention to the markings on the motor driver.  Incorrect wiring could damage the driver.
+    ::: warning Warning
+    Pay attention to the markings on the motor driver.  Incorrect wiring could damage the driver.
+    :::
 
 3. Route the spliced cable under the motor driver to organize and prevent stress on screw terminal
 4. Secure motor driver to chassis using self taping screws
 5. Secure left and right motor wires to motor screw terminals
 
-    ???+ info
-        ***Notice (3/11/2019):*** We made a slight mistake: the red and black wires for the left and right motor are actually flipped in the image shown above.  This will not cause damage, but the motors will spin backwards.  Please flip them to the correct orientation.
+    ::: info Info
+    ***Notice (3/11/2019):*** We made a slight mistake: the red and black wires for the left and right motor are actually flipped in the image shown above.  This will not cause damage, but the motors will spin backwards.  Please flip them to the correct orientation.
+    :::
 
 ### Step 6 - Mount WiFi antennas
 
-!!! attention ""
+::: warning
 
-    Skip this step if you are using a USB WiFi dongle instead of the M.2 WiFi module
+Skip this step if you are using a USB WiFi dongle instead of the M.2 WiFi module
+:::
 
 <a href="./images/JB3-Assy_06-0.JPG"><img src="./images/JB3-Assy_06-0.JPG" style="height:120px"></a>
 <a href="./images/JB3-Assy_07-1.JPG"><img src="./images/JB3-Assy_07-1.JPG" style="height:120px"></a>
@@ -123,9 +128,10 @@ To build JetBot you'll need the following tools
 
 ### Step 7 - Remove Jetson Nano module from developer kit
 
-!!! attention ""
+::: warning
 
-    Skip this step if you are using a USB WiFi dongle instead of the M.2 WiFi module
+Skip this step if you are using a USB WiFi dongle instead of the M.2 WiFi module
+:::
 
 <a href="./images/JB3-Assy_06-1.JPG"><img src="./images/JB3-Assy_06-1.JPG" style="height:120px"></a>
 <a href="./images/JB3-Assy_06-2.JPG"><img src="./images/JB3-Assy_06-2.JPG" style="height:120px"></a>
@@ -139,9 +145,10 @@ To build JetBot you'll need the following tools
 
 ### Step 8 - Attach WiFi module to developer kit
 
-!!! attention ""
+::: warning
 
-    Skip this step if you are using a USB WiFi dongle instead of the M.2 WiFi module
+Skip this step if you are using a USB WiFi dongle instead of the M.2 WiFi module
+:::
 
 <a href="./images/JB3-Assy_08-1.JPG"><img src="./images/JB3-Assy_08-1.JPG" style="height:120px"></a>
 <a href="./images/JB3-Assy_08-2.JPG"><img src="./images/JB3-Assy_08-2.JPG" style="height:120px"></a>
@@ -169,8 +176,9 @@ To build JetBot you'll need the following tools
 
 2. Insert the caster base into shroud, securing the ball
 
-    ???+ tip 
-        Depending on how the print turns out, the ball socket enclosure may fit too tight. If this is the case, you can easily use a file to remove some excess material.
+    ::: tip Tip
+    Depending on how the print turns out, the ball socket enclosure may fit too tight. If this is the case, you can easily use a file to remove some excess material.
+    :::
 
 3. Attach the assembled caster onto the chassis with self taping screws
 
@@ -183,8 +191,9 @@ To build JetBot you'll need the following tools
 
 2. Solder the pins depicted (3.3V, SDA, SCL, and GND solder seen when zoomed in on right image)
 
-    ???+ warning
-        The pins are close to the display screen, be careful to avoid the screen with soldering iron tip. 
+    ::: warning Warning
+    The pins are close to the display screen, be careful to avoid the screen with soldering iron tip. 
+    :::
 
 ### Step 11 - Wire motor driver to *PiOLED* display
 
@@ -194,15 +203,17 @@ To build JetBot you'll need the following tools
 
 1. Select 4 wire segment of female-female jumper cables.
 
-    ???+ info
-        We use brown, red, orange, yellow segment.  You can map the colors accordingly.
+    ::: info Info
+    We use brown, red, orange, yellow segment.  You can map the colors accordingly.
+    :::
 
 2. Attach 3.3V (red), GND (brown), SDA (orange), and SCL (yellow) to motor driver as shown
 3. Route the 4 wire jumper cable segment through chassis
 4. Attach red, brown, orange and yellow wires to right angle header as depicted
 
-    ???+ warning 
-        Pay close attention!  Reversing the red / brown wires could damage the system.
+    ::: warning Warning
+    Pay close attention!  Reversing the red / brown wires could damage the system.
+    :::
 
 ### Step 12 - Mount camera
 

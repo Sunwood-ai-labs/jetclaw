@@ -1,7 +1,8 @@
 # Wi-Fi connection setup 
 
-???+ info
-    You can skip this page if you already have a wireless connection to your JetBot from your computer.
+::: info Info
+You can skip this page if you already have a wireless connection to your JetBot from your computer.
+:::
 
 To go through the actual example applications on JetBot, you interact with JetBot from your (laptop) PC through Wi-Fi network.
 
@@ -19,9 +20,10 @@ For this you need to fisrt connect the following to the Jetson on your JetBot.
 With this setup, you can use Jetson like a standard Linux computer. <br>
 We call this **Monitor-attached Mode**.
 
-???+ hint
-    If you don't have above items handy, then you can also try the headless way of configuring Wi-Fi.
-    Head down to the next section, [Headless Mode](#headless-mode).
+::: info Hint
+If you don't have above items handy, then you can also try the headless way of configuring Wi-Fi.
+Head down to the next section, [Headless Mode](#headless-mode).
+:::
 
 
 ### Connect to Wi-Fi AP
@@ -204,13 +206,14 @@ Open your SSH client software (PuTTY, etc) on your PC, and try to connect the SS
 This is how you connect to your JetBot over Wi-Fi.<br>
 Once you confirm you can connect to your Jetson remotely from your PC via Wi-Fi, **you can now remove the Micro USB cable** and let your JetBot free!
 
-???+ info
-    Next, you move on to either page below.
+::: info Info
+Next, you move on to either page below.
 
-    - [Software setup using Docker container](docker.md) 
-    - [Software setup using SD card image](sd_card.md)
-    
-    Once your JetBot software is configure, you should see JetBot's IP address on the small OLED display.<br>
-    You would only need to come back to this step to re-connect to the network or to find the IP address when your JetBot fails to get the IP address and show the current IP address on the OLED display.
+- [Software setup using Docker container](docker.md) 
+- [Software setup using SD card image](sd_card.md)
+
+Once your JetBot software is configure, you should see JetBot's IP address on the small OLED display.<br>
+You would only need to come back to this step to re-connect to the network or to find the IP address when your JetBot fails to get the IP address and show the current IP address on the OLED display.
+:::
 
 

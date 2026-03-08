@@ -1,7 +1,8 @@
 # Teleoperation
 
-???+ info
-    This example requires a gamepad controller connected to your laptop/workstation.
+::: info Info
+This example requires a gamepad controller connected to your laptop/workstation.
+:::
 
 In this example we'll drive JetBot remotely, view live streaming video, and save snapshots!
 

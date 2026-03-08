@@ -10,6 +10,7 @@ In this notebook we'll control JetBot by programming from a web browser.
 3. Navigate to ``~/Notebooks/basic_motion/``
 4. Open and follow the [``basic_motion.ipynb``](https://github.com/NVIDIA-AI-IOT/jetbot/blob/master/notebooks/basic_motion/basic_motion.ipynb) notebook
     
-???+ caution
-    JetBot will physically move in this notebook, make sure it has enough space to move around.
+::: danger Caution
+JetBot will physically move in this notebook, make sure it has enough space to move around.
+:::
 

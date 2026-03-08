@@ -46,5 +46,6 @@ In this example we'll collect an *image regression* dataset that will enable Jet
 4. Navigate to ``~/Notebooks/road_following``
 5. Open and follow the ``live_demo_trt.ipynb`` notebook to run the optimized model
 
-???+ warning
-    Start cautious and give JetBot enough space to move around.
+::: warning Warning
+Start cautious and give JetBot enough space to move around.
+:::

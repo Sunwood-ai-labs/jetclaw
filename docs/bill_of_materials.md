@@ -1,11 +1,12 @@
-!!! note
+::: info Note
 
-    JetBot was originally designed with ***Jetson Nano Developer Kit***, which was [discontinued](https://forums.developer.nvidia.com/t/jetson-nano-developer-kit-eol/276729).
+JetBot was originally designed with ***Jetson Nano Developer Kit***, which was [discontinued](https://forums.developer.nvidia.com/t/jetson-nano-developer-kit-eol/276729).
 
-    For those newly starting, we recommend planning the JetBot assembly with **Jetson Orin Nano 8GB Developer Kit**.<br>
-    The Bill of Materials for Orin version of JetBot is laid out on [Bill of Materials (Orin)](./bill_of_materials_orin.md) page.
+For those newly starting, we recommend planning the JetBot assembly with **Jetson Orin Nano 8GB Developer Kit**.<br>
+The Bill of Materials for Orin version of JetBot is laid out on [Bill of Materials (Orin)](./bill_of_materials_orin.md) page.
 
-    Please note that, currently, the software for the Orin version of JetBot is still work in progress.
+Please note that, currently, the software for the Orin version of JetBot is still work in progress.
+:::
 
 
 This page lists everything you need to build JetBot, along with purchasing links from popular vendors.
@@ -62,9 +63,10 @@ You need a WiFi solution for each JetBot.  Select an option and get the parts sp
 
 This option is a good choice if you're building JetBot with the original Jetson Nano 4GB.  It has been widely tested and used for JetBot.
 
-???+ attention
+::: warning Attention
 
-    Jetson Nano 2GB does not have a M.2 connector, so this option will not work with it.
+Jetson Nano 2GB does not have a M.2 connector, so this option will not work with it.
+:::
 
 |  **Part** | **Quantity** | **Cost** | **URL** | **Notes** |
 | --- | --: | --: | --- | --- |
@@ -80,10 +82,11 @@ This option is compatible with both the original Jetson Nano (4GB) and Jetson Na
 | WiFi Dongle - TP-Link Archer T2U Nano | 1 | $17.99 | [Amazon](https://amzn.com/B07PB1X4CN/) | RTL8811AU chipset |
 | WiFi Dongle - TP-Link Archer T2U Plus | 1 | $19.99 | [Amazon](https://amzn.com/B07P5PRK7J/) | RTL8811AU chipset |
 
-???+ info
-    For other possible USB Wi-fi dongles that you can use on Jetson Nano, please check the Suported Components List.
+::: info Info
+For other possible USB Wi-fi dongles that you can use on Jetson Nano, please check the Suported Components List.
 
-    - [Jetson Nano 2GB Developer Kit User Guide - Supported Component List](https://developer.nvidia.com/embedded/learn/jetson-nano-2gb-devkit-user-guide#id-.JetsonNano2GBDeveloperKitUserGuidevbatuu_v1.0-SupportedComponentList)
+- [Jetson Nano 2GB Developer Kit User Guide - Supported Component List](https://developer.nvidia.com/embedded/learn/jetson-nano-2gb-devkit-user-guide#id-.JetsonNano2GBDeveloperKitUserGuidevbatuu_v1.0-SupportedComponentList)
+:::
 
 ### Wheels
 

@@ -1,12 +1,13 @@
 # Bill of Materials - Jetson Orin Nano version
 
-!!! note
+::: info Note
 
-    JetBot was originally designed with ***Jetson Nano Developer Kit***, which was [discontinued](https://forums.developer.nvidia.com/t/jetson-nano-developer-kit-eol/276729).
+JetBot was originally designed with ***Jetson Nano Developer Kit***, which was [discontinued](https://forums.developer.nvidia.com/t/jetson-nano-developer-kit-eol/276729).
 
-    For those newly starting, we recommend planning the JetBot assembly with **Jetson Orin Nano 8GB Developer Kit**. 
+For those newly starting, we recommend planning the JetBot assembly with **Jetson Orin Nano 8GB Developer Kit**. 
 
-    Please note that, currently, the software for the Orin version of JetBot is still work in progress.
+Please note that, currently, the software for the Orin version of JetBot is still work in progress.
+:::
 
 
 This page lists all the parts you need to build the open-source JetBot with the new [**Jetson Orin Nano 8GB Developer Kit**](https://developer.nvidia.com/embedded/learn/get-started-jetson-orin-nano-devkit), along with purchasing links from popular vendors.
@@ -37,9 +38,10 @@ You need these components for each JetBot.
 | Battery | 1 | $12.99 | [Amazon](https://a.co/d/5DvsXGu) | PD 20W output, 10,000mAh |
 | USB-C PD cable | 1 | $10.99 | [Amazon](https://a.co/d/ihjA431) | USB-C to DC 5.5mm x 2.5mm, right angle |
 
-!!! note
+::: info Note
 
-    With this power source option, we recommend setting Jetson Orin Nano in `7W` mode (`sudo nvpmodel -m 1`), as we observed Jetson in `15W` mode shutdown in certain scenarios like suddenly ramping up the motor from 0% to 100% speed or having motors stalled.
+With this power source option, we recommend setting Jetson Orin Nano in `7W` mode (`sudo nvpmodel -m 1`), as we observed Jetson in `15W` mode shutdown in certain scenarios like suddenly ramping up the motor from 0% to 100% speed or having motors stalled.
+:::
 
 ### Camera
 
