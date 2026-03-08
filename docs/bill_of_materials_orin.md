@@ -27,8 +27,8 @@ You need these components for each JetBot.
 | USB cable pack | 1 | $6.99 | [Amazon](http://amzn.com/B01N337FQF/) | Type A to Micro, right angle |
 | *PiOLED* display | 1 | $13.45 | [Adafruit](http://adafru.it/3527), [Amazon](https://a.co/d/cmRS0RE) |  |
 | *PiOLED* header | 1 | $7.99 | [Adafruit](http://adafru.it/1541), [Amazon](https://a.co/d/fGDbnIE), [Sparkfun](https://www.sparkfun.com/products/12792) | 2x(3+) right angle male |
-| Chassis | 1 | -- | [STL file](cad/chassis.stl) | see [3D printing](3d-printing) | |
-| Camera Mount | 1 | -- | [STL file](cad/camera_mount.stl) | see [3D printing](3d-printing) |
+| Chassis | 1 | -- | [STL file](./cad/chassis.stl) | see [3D printing](./3d_printing.md) | |
+| Camera Mount | 1 | -- | [STL file](./cad/camera_mount.stl) | see [3D printing](./3d_printing.md) |
 
 ### Power source
 
@@ -68,16 +68,16 @@ You need wheels with a "TT" motor shaft connector for each JetBot.  Select an op
 |  **Part** | **Quantity** | **Cost** | **URL** | **Notes** |
 | --- | --: | --: | --- | --- |
 | Wheel | 2 | $5.00 | [Adafruit](http://adafru.it/3757) | 60mm diameter |
-| Caster base | 1 | -- | [STL file](cad/caster_base_60mm.stl) | for 60mm wheel |
-| Caster shroud | 1 | -- | [STL file](cad/caster_shroud_60mm.stl) | for 60mm wheel |
+| Caster base | 1 | -- | [STL file](./cad/caster_base_60mm.stl) | for 60mm wheel |
+| Caster shroud | 1 | -- | [STL file](./cad/caster_shroud_60mm.stl) | for 60mm wheel |
 
 #### Option 2 - 65mm
 
 |  **Part** | **Quantity** | **Cost** | **URL** | **Notes** |
 | --- | --: | --: | --- | --- |
 | Wheel | 2 | $3.00 | [Adafruit](https://www.adafruit.com/product/3763) | 65mm diameter |
-| Caster base | 1 | -- | [STL file](cad/caster_base_65mm.stl) | for 65mm wheel|
-| Caster shroud | 1 | -- | [STL file](cad/caster_shroud_65mm.stl) | for 65mm wheel |
+| Caster base | 1 | -- | [STL file](./cad/caster_base_65mm.stl) | for 65mm wheel|
+| Caster shroud | 1 | -- | [STL file](./cad/caster_shroud_65mm.stl) | for 65mm wheel |
 
 ### Assembly Hardware
 
