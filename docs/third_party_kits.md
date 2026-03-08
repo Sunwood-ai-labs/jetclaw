@@ -8,7 +8,7 @@ In addition to the open-source DIY version, several third party JetBot kits usin
 
 ## Waveshare JetBot
     
-<img src="images/waveshare_jetbot_green.jpg"  style="height:256px">
+<img src="./images/waveshare_jetbot_green.jpg"  style="height:256px">
 
     
 | Kit      | URL |

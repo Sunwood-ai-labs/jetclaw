@@ -42,11 +42,11 @@ of filaments that we have tested with the [Monoprice Voxel](https://amzn.to/2GbU
 
 * Print orientation
 
-<a href="images/Cura-Print-Setup_overall.png"><img src="images/Cura-Print-Setup_overall.png" width="800" height="480"></a>
+<a href="./images/Cura-Print-Setup_overall.png"><img src="./images/Cura-Print-Setup_overall.png" width="800" height="480"></a>
 
 * Slice configuration (Cura)
 
-<img src="images/Cura-Print-Setup_Detail_Express.png" >
+<img src="./images/Cura-Print-Setup_Detail_Express.png" >
 
 ## Method 2 - Use a printing service
 
