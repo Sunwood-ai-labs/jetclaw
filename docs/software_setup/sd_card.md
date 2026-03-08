@@ -5,7 +5,7 @@
 JetBot was originally designed with ***Jetson Nano Developer Kit***, which was [discontinued](https://forums.developer.nvidia.com/t/jetson-nano-developer-kit-eol/276729).
 
 For those newly starting, we recommend planning the JetBot assembly with **Jetson Orin Nano 8GB Developer Kit**.<br>
-The Bill of Materials for Orin version of JetBot is laid out on [Bill of Materials (Orin)](./bill_of_materials_orin.md) page.
+The Bill of Materials for Orin version of JetBot is laid out on [Bill of Materials (Orin)](../bill_of_materials_orin.md) page.
 
 Please note that, currently, the software for the Orin version of JetBot is still work in progress.
 :::
