@@ -13,6 +13,9 @@ hero:
       text: Get Started
       link: /getting_started
     - theme: alt
+      text: Architecture
+      link: /jetclaw/architecture
+    - theme: alt
       text: Waveshare Guide
       link: /jetclaw/waveshare-jetbot-2gb
     - theme: alt
@@ -37,3 +40,5 @@ JetClaw combines three layers that have to stay aligned:
 - the docs and operational rules for a real robot
 
 If you are new to the project, start with [Getting Started](/getting_started). If the robot hardware is already on your desk, go straight to [Waveshare JetBot 2GB](/jetclaw/waveshare-jetbot-2gb). If PicoClaw is the missing piece, use [PicoClaw Integration](/jetclaw/picoclaw).
+
+For an editable rough diagram of the validated stack, use [Architecture](/jetclaw/architecture). That page also links directly to the draw.io XML kept in the repository.

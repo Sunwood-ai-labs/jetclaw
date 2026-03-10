@@ -7,7 +7,7 @@ export default defineConfig({
   base: '/jetclaw/',
   cleanUrls: true,
   lastUpdated: true,
-  ignoreDeadLinks: [/^\.\/cad\/.*\.stl$/],
+  ignoreDeadLinks: [/^\.\/cad\/.*\.stl$/, /^\/diagrams\/.*\.drawio$/],
   head: [['link', { rel: 'icon', href: '/images/favicon.png' }]],
   vite: {
     assetsInclude: ['**/*.JPG', '**/*.JPEG', '**/*.PNG', '**/*.GIF']
@@ -17,6 +17,7 @@ export default defineConfig({
     siteTitle: 'JetClaw',
     nav: [
       { text: 'Guide', link: '/getting_started' },
+      { text: 'Architecture', link: '/jetclaw/architecture' },
       { text: 'Waveshare', link: '/jetclaw/waveshare-jetbot-2gb' },
       { text: 'PicoClaw', link: '/jetclaw/picoclaw' },
       { text: 'GitHub', link: 'https://github.com/Sunwood-ai-labs/jetclaw' }
@@ -27,6 +28,7 @@ export default defineConfig({
         items: [
           { text: 'Home', link: '/' },
           { text: 'Getting Started', link: '/getting_started' },
+          { text: 'Architecture', link: '/jetclaw/architecture' },
           { text: 'Waveshare JetBot 2GB', link: '/jetclaw/waveshare-jetbot-2gb' },
           { text: 'PicoClaw Integration', link: '/jetclaw/picoclaw' },
           { text: 'Operations', link: '/jetclaw/operations' }

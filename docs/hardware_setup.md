@@ -1,5 +1,12 @@
 This page details the hardware setup instructions for creating JetBot
 
+::: warning Waveshare JetClaw users
+
+This assembly guide describes the upstream DIY JetBot hardware path.
+
+If you are building the validated JetClaw setup with the Waveshare JetBot 2GB AI Kit, use [Waveshare JetBot 2GB](./jetclaw/waveshare-jetbot-2gb.md) first. The Waveshare kit uses a different board layout and does not follow every step on this page.
+:::
+
 ## Tools needed
 
 To build JetBot you'll need the following tools

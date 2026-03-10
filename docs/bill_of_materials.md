@@ -8,6 +8,18 @@ The Bill of Materials for Orin version of JetBot is laid out on [Bill of Materia
 Please note that, currently, the software for the Orin version of JetBot is still work in progress.
 :::
 
+::: info Validated JetClaw path
+
+If you are following the validated JetClaw setup in this repository, the shortest path is not this DIY bill of materials.
+
+Use these two parts instead:
+
+- Waveshare JetBot 2GB AI Kit
+- Jetson Nano 2GB Developer Kit
+
+The validated purchase notes, cautions, and system overview live on [Waveshare JetBot 2GB](./jetclaw/waveshare-jetbot-2gb.md) and [Architecture](./jetclaw/architecture.md).
+:::
+
 
 This page lists everything you need to build JetBot, along with purchasing links from popular vendors.
 

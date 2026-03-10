@@ -11,6 +11,17 @@ Please note, we do not officially maintain these kits in this GitHub project.  P
     
 <img src="./images/waveshare_jetbot_green.jpg"  style="height:256px">
 
+### Validated JetClaw purchase notes
+
+The validated JetClaw setup in this repository uses the Waveshare kit plus a separate Jetson Nano 2GB Developer Kit.
+
+| Part | Reference price | Purchase link | Notes |
+| --- | ---: | --- | --- |
+| Waveshare JetBot 2GB AI Kit | `JPY 26,182` | [Amazon.co.jp](https://www.amazon.jp/dp/B08R5WNSYR?ref=ppx_pop_mob_ap_share) | Jetson Nano 2GB only, 3x `18650` cells sold separately, keep cells under `67 mm` |
+| Jetson Nano 2GB Developer Kit | `JPY 25,800` | [Amazon.co.jp](https://amzn.asia/d/068WVBvj) | `microSD` sold separately, `5V/4A` adapter may be needed, discontinued so stock can vary |
+
+For the hardware behavior and the editable system diagram used by JetClaw, see [Waveshare JetBot 2GB](./jetclaw/waveshare-jetbot-2gb.md) and [Architecture](./jetclaw/architecture.md).
+
     
 | Kit      | URL |
 |----------|-----|

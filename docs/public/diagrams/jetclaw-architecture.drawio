@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net" modified="2026-03-11T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="jetclaw-architecture" name="JetClaw Architecture">
+    <mxGraphModel dx="1648" dy="960" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f8f2;strokeColor=#d9f99d;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1520" height="780" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="JetClaw rough architecture&#xa;Waveshare JetBot 2GB + PicoClaw on Jetson Nano 2GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d2f19;strokeColor=#0d2f19;fontColor=#ffffff;fontStyle=1;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="80" y="70" width="760" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="Theme colors mirror docs/.vitepress/theme/custom.css&#xa;Brand: #2f8f48 / #25743a / #1a5a2b, accent: #84cc16, bg: #f3f8f2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2f8f48;fontColor=#1a5a2b;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="890" y="70" width="610" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1" value="External control" style="swimlane;rounded=1;whiteSpace=wrap;html=1;startSize=34;fillColor=#ffffff;strokeColor=#2f8f48;fontColor=#0d2f19;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="180" width="280" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="discord" value="Discord operator&#xa;or chat client" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7f4e9;strokeColor=#2f8f48;fontColor=#1a5a2b;fontStyle=1;" vertex="1" parent="lane1">
+          <mxGeometry x="25" y="70" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="command" value="Short status checks&#xa;and movement requests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f8f2;strokeColor=#84cc16;fontColor=#1a5a2b;" vertex="1" parent="lane1">
+          <mxGeometry x="25" y="145" width="230" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" value="Agent and runtime layer" style="swimlane;rounded=1;whiteSpace=wrap;html=1;startSize=34;fillColor=#ffffff;strokeColor=#2f8f48;fontColor=#0d2f19;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="180" width="380" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway" value="/usr/bin/picoclaw&#xa;Gateway service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2f8f48;strokeColor=#25743a;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="lane2">
+          <mxGeometry x="40" y="65" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="runtime" value="~/.picoclaw runtime&#xa;config.json&#xa;picoclaw.env&#xa;workspace/jetbot_bridge.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f8f2;strokeColor=#2f8f48;fontColor=#1a5a2b;" vertex="1" parent="lane2">
+          <mxGeometry x="40" y="165" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sync" value="scripts/sync_picoclaw_config.py&#xa;injects runtime secrets into generated config" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#84cc16;fontColor=#1a5a2b;" vertex="1" parent="lane2">
+          <mxGeometry x="40" y="310" width="300" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="bridge" value="scripts/jetbot_agent_bridge.py&#xa;localhost-only safe motion bridge&#xa;speed &lt;= 0.35, duration &lt;= 1.50s" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#25743a;strokeColor=#1a5a2b;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="lane2">
+          <mxGeometry x="40" y="410" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3" value="Robot software" style="swimlane;rounded=1;whiteSpace=wrap;html=1;startSize=34;fillColor=#ffffff;strokeColor=#2f8f48;fontColor=#0d2f19;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="180" width="300" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="jetbot" value="jetbot/ Python package&#xa;robot.py&#xa;motor.py&#xa;ina219.py&#xa;apps/stats.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7f4e9;strokeColor=#2f8f48;fontColor=#1a5a2b;fontStyle=1;" vertex="1" parent="lane3">
+          <mxGeometry x="35" y="95" width="230" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="native" value="Optional native validation&#xa;Jupyter + stats services" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#84cc16;fontColor=#1a5a2b;" vertex="1" parent="lane3">
+          <mxGeometry x="35" y="250" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lane4" value="Validated hardware" style="swimlane;rounded=1;whiteSpace=wrap;html=1;startSize=34;fillColor=#ffffff;strokeColor=#2f8f48;fontColor=#0d2f19;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="180" width="340" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="kit" value="Waveshare JetBot 2GB AI Kit&#xa;expansion board, motors, OLED,&#xa;INA219, IMX219 camera,&#xa;speaker, microphone" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2f8f48;strokeColor=#25743a;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="lane4">
+          <mxGeometry x="35" y="75" width="270" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="nano" value="Jetson Nano 2GB Developer Kit&#xa;microSD required&#xa;5V/4A adapter optional by power path" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f8f2;strokeColor=#2f8f48;fontColor=#1a5a2b;" vertex="1" parent="lane4">
+          <mxGeometry x="35" y="225" width="270" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="battery" value="3x 18650 cells sold separately&#xa;keep length under 67 mm" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#84cc16;fontColor=#1a5a2b;" vertex="1" parent="lane4">
+          <mxGeometry x="35" y="345" width="270" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="repoBox" value="Repo-owned assets&#xa;docs/&#xa;picoclaw/service templates&#xa;workspace seed files&#xa;install scripts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2f8f48;fontColor=#1a5a2b;" vertex="1" parent="1">
+          <mxGeometry x="80" y="700" width="360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="trackedNote" value="Not committed: ~/.picoclaw secrets, tokens, sessions, runtime state" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7ed;strokeColor=#c2410c;fontColor=#9a3412;" vertex="1" parent="1">
+          <mxGeometry x="480" y="700" width="500" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="drawioNote" value="Editable diagram file&#xa;docs/public/diagrams/jetclaw-architecture.drawio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecfccb;strokeColor=#84cc16;fontColor=#1a5a2b;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="700" width="480" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2f8f48;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="discord" target="gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#84cc16;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="command" target="gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2f8f48;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="gateway" target="runtime">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#84cc16;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="sync" target="runtime">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#25743a;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="gateway" target="bridge">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2f8f48;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="bridge" target="jetbot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#25743a;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="jetbot" target="kit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#84cc16;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="nano" target="kit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#84cc16;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="battery" target="kit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2f8f48;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="repoBox" target="sync">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2f8f48;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="repoBox" target="bridge">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

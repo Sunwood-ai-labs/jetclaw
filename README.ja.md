@@ -51,12 +51,69 @@ Discord
 - runtime state は `~/.picoclaw` に置きます
 - 秘密情報やセッション状態は repo に commit しません
 
+## 検証済みハードウェア構成
+
+今回の構成では、次の 2 点を主役のハードウェアとして使っています。
+
+### 1. Waveshare JetBot 2GB AI Kit
+
+今回のセットアップの主役です。Jetson Nano 2GB 専用のロボットキットで、拡張ボード、カメラ、OLED、スピーカー、マイクなどが一式入っています。
+
+購入前の注意:
+
+- Jetson Nano 2GB 専用です。4GB 版には対応していません。
+- `18650` 電池 3 本は別売りです。
+- 電池の長さは `67 mm` 未満を推奨します。保護回路付きセルは長すぎて入らない場合があります。
+- Jetson Nano 2GB 本体も別売りです。
+
+| 項目 | 内容 |
+| --- | --- |
+| 参考価格 | `¥26,182`（税込） |
+| 出品者 | Amazon 経由 EIKO SHOP |
+| 在庫 | 残りわずかになる場合あり |
+
+購入リンク:
+
+- [Waveshare JetBot 2GB AI Kit を Amazon.co.jp で見る](https://www.amazon.jp/dp/B08R5WNSYR?ref=ppx_pop_mob_ap_share)
+
+### 2. NVIDIA Jetson Nano 2GB 開発者キット
+
+JetBot の頭脳部分です。Jetson Nano 2GB を別途用意して、上のキットと組み合わせます。
+
+購入前の注意:
+
+- `microSD` カードは別売りです。`64GB` 以上を推奨します。
+- `5V/4A` の電源アダプタも別売りです。ただし拡張ボード経由で給電する構成では不要な場合があります。
+- Jetson Nano 2GB は生産終了品なので、在庫状況は要確認です。
+
+| 項目 | 内容 |
+| --- | --- |
+| 参考価格 | `¥25,800`（税込） |
+| 備考 | 生産終了品のため在庫が限られる場合あり |
+
+購入リンク:
+
+- [Jetson Nano 2GB 開発者キットを Amazon.co.jp で見る](https://amzn.asia/d/068WVBvj)
+
+上の価格と在庫メモは、今回の検証構成に使った購入メモをそのまま残した参考情報です。実際の価格や在庫は変動する前提で見てください。
+
+## 編集可能な構成図
+
+draw.io でそのまま開ける XML はここに置いてあります。
+
+- [docs/public/diagrams/jetclaw-architecture.drawio](./docs/public/diagrams/jetclaw-architecture.drawio)
+
+ブラウザで見やすい説明ページは次です。
+
+- [docs/jetclaw/architecture.md](./docs/jetclaw/architecture.md)
+
 ## ドキュメント
 
 詳細は以下を見てください。
 
 - 全体手順: [README.md](./README.md)
 - クイックスタート: [docs/getting_started.md](./docs/getting_started.md)
+- 構成図: [docs/jetclaw/architecture.md](./docs/jetclaw/architecture.md)
 - Waveshare JetBot 2GB 固有情報: [docs/jetclaw/waveshare-jetbot-2gb.md](./docs/jetclaw/waveshare-jetbot-2gb.md)
 - PicoClaw 連携: [docs/jetclaw/picoclaw.md](./docs/jetclaw/picoclaw.md)
 - 運用手順: [docs/jetclaw/operations.md](./docs/jetclaw/operations.md)

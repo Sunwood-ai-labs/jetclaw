@@ -50,6 +50,62 @@ Important detail:
 - this repo owns the service templates, bridge script, workspace seed, and config template
 - runtime state lives in `~/.picoclaw`
 
+## Validated Hardware Set
+
+This setup was validated with the following two main parts:
+
+### 1. Waveshare JetBot 2GB AI Kit
+
+This is the robot kit used throughout this repository. It bundles the expansion board, camera, OLED, speaker, microphone, and the main mechanical parts for the Jetson Nano 2GB build.
+
+Before ordering:
+
+- Jetson Nano 2GB only. This kit is not for the 4GB developer kit.
+- Three `18650` cells are sold separately.
+- Keep battery length under `67 mm`; protected cells may be too long.
+- The Jetson Nano 2GB board itself is sold separately.
+
+| Item | Details |
+| --- | --- |
+| Reference price | `JPY 26,182` (tax included) |
+| Seller | EIKO SHOP via Amazon Japan |
+| Stock note | Availability may be limited |
+
+Purchase link:
+
+- [Waveshare JetBot 2GB AI Kit on Amazon Japan](https://www.amazon.jp/dp/B08R5WNSYR?ref=ppx_pop_mob_ap_share)
+
+### 2. NVIDIA Jetson Nano 2GB Developer Kit
+
+This is the compute board used as the controller for the robot.
+
+Before ordering:
+
+- A `microSD` card is sold separately. `64 GB` or larger is recommended.
+- A `5V/4A` power adapter is also sold separately, although it may not be needed if you power the board through the expansion board path.
+- The Jetson Nano 2GB developer kit is discontinued, so remaining stock can vary.
+
+| Item | Details |
+| --- | --- |
+| Reference price | `JPY 25,800` (tax included) |
+| Note | Discontinued product with limited stock |
+
+Purchase link:
+
+- [Jetson Nano 2GB Developer Kit on Amazon Japan](https://amzn.asia/d/068WVBvj)
+
+Prices and stock notes above are reference values from the validated shopping list and may change over time.
+
+## Editable Diagram
+
+For a rough editable system diagram, open the draw.io XML here:
+
+- [docs/public/diagrams/jetclaw-architecture.drawio](./docs/public/diagrams/jetclaw-architecture.drawio)
+
+The browsable docs version of the same overview lives on the Architecture page:
+
+- [docs/jetclaw/architecture.md](./docs/jetclaw/architecture.md)
+
 ## Docs
 
 Local docs commands:

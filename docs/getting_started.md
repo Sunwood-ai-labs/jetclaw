@@ -4,6 +4,11 @@ This is the shortest path for bringing up JetClaw on a real Waveshare JetBot 2GB
 
 For the full step-by-step commands, use the root [README](https://github.com/Sunwood-ai-labs/jetclaw/blob/main/README.md). This page stays shorter on purpose and points you at the right checks in the right order.
 
+If you are still sourcing hardware, review these two pages first:
+
+- [Waveshare JetBot 2GB](./jetclaw/waveshare-jetbot-2gb.md) for the validated purchase notes and hardware cautions
+- [Architecture](./jetclaw/architecture.md) for the rough system layout and the editable draw.io XML
+
 ## 1. Confirm The Hardware First
 
 Do not start with PicoClaw if the robot itself is not proven.
